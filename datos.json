@@ -1,0 +1,19 @@
+{
+    "informacion_personal": {
+        "nombre" : "gis",
+        "rut" : "21572252-k",
+        "profesion" : "estudiante",
+        "direccion" : "av. siempre viva 1234",
+        "edad" : 18,
+        "fecha_nac" : "2023-05-12" 
+    },
+
+    "informacion_salud": {
+       "afiliacion" : "fonasa",
+       "tipo_sangre" : "nomeacuerdo",
+       "alergia" : true,
+       "operado" : true,
+       "enfermedades" : ["posible depresion", "amsieda socialxd", "pendejez"]
+    }
+}
+
