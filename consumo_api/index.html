@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RICK AND MORTY</title>
+    <title>Pagina de juegos</title>
 </head>
 <body>
+    <input id="button" type="button" value="CARGAR">
     <table>
         <tr>
             <th>Nombre</th>
-            <th>Especie</th>
+            <th>Tipo de dispositivo</th>
+            <th>espacio requerido</th>
         </tr>
         <tr>
-            <td>Gis</td>
-            <td>Alien</td>
+            <td>gta</td>
+            <td>pc, play...</td>
+            <td>999...</td>
         </tr>
     </table>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            var url = "https://rickandmortyapi.com/api/character"
+            $.get(url, function(json)){
+                alert(json.stringify(json))
+            }
+        })
+    </script>
 </body>
 </html>
