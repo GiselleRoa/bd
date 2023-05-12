@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consumo Api</title>
+</head>
+<body>
+    <input id="load" type="button" value="Cargar filas">
+    
+    <table id="characters">
+        <tr>
+            <th>ID</th>
+            <th>NOMBRE</th>
+            <th>ESTADO</th>
+            <th>ESPECIE</th>
+        </tr>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js" 
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" 
+    crossorigin="anonymous">
+    </script>
+<!-- aparece el "name" porque así es el api -->
+    <script>
+        $(document).ready(function(){
+            $("#load").click(function(){
+                var url = "https://rickandmortyapi.com/api/character"
+                $.get(url, function(json){
+                    $.each(json.results, function(index, element){
+                        var row = "<tr>"+
+                        "<td>"+ element.id + "</td>"+
+                         "<td>"+ element.name +"</td>"+
+                         "<td>"+ element.status +"</td>"+
+                         "<td>"+ element.species +"</td>"+
+                        "</tr>"
+                        $("#characters").append(row)
+                    })
+                })
+            })
+        })
+    </script>
+</body>
+</html>
